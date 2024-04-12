@@ -1,0 +1,24 @@
+{
+  "name": "zerostepai",
+  "config": {
+    "url": "https://gcapi-content-hub-develop.go-vip.net/search-results/"
+  },
+  "scripts": {
+    "saveSession": "playwright codegen $npm_package_config_url --save-storage='storageSession.json' --browser='firefox'",
+    "debugPlaywright": "URL=$npm_package_config_url npx playwright test --config=playwright.config.ts --project='chromium' --headed --debug",
+    "regressionPlaywright": "URL=$npm_package_config_url npx playwright test --config=playwright.config.ts --project='chromium' --workers 3 --repeat-each 1",
+    "regressionPlaywrightHeaded": "URL=$npm_package_config_url npx playwright test --config=playwright.config.ts --project='chromium' --headed --workers 3 --repeat-each 1",
+    "uiPlaywright": "URL=$npm_package_config_url npx playwright test --ui --config=playwright.config.ts --project='chromium'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "@types/node": "^20.12.7",
+    "@zerostep/playwright": "^0.1.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
