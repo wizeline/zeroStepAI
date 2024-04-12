@@ -1,7 +1,7 @@
 {
   "name": "zerostepai",
   "config": {
-    "url": "https://gcapi-content-hub-develop.go-vip.net/search-results/"
+    "url": "https://www.saucedemo.com/"
   },
   "scripts": {
     "saveSession": "playwright codegen $npm_package_config_url --save-storage='storageSession.json' --browser='firefox'",
