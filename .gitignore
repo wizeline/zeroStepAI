@@ -1,6 +1,11 @@
-node_modules/
+/node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
 .env
+storageSession.json
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
