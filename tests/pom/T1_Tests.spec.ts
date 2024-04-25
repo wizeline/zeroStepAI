@@ -6,7 +6,7 @@ import { cartPage } from './cartPage.pom.ts';
 import { checkoutPage } from './checkoutPage.pom.ts';
 require('dotenv').config()
 
-test.describe.parallel('Zero step IA by GPT3.5 and GPT4', () => {
+test.describe.serial('Zero step IA by GPT3.5 and GPT4', () => {
   let login
   let inventory
   let cart
