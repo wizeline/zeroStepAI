@@ -42,7 +42,7 @@ test('Purchace article not complete info', async ({ page }) => {
   
   var statusPurchase = await ai('the purchase was successful?', { page, test })
   console.log(statusPurchase)
-  expect(statusPurchase).toEqual(true)
+  expect(statusPurchase).toEqual(false)
 
   await page.pause()
 
