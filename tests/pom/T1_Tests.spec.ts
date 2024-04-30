@@ -25,7 +25,7 @@ test('Login bad credentials', async ({ page }) => {
   await login.validateLoginsStatus()
 
   await page.pause()
-
+  
 });
 
 test('Search the most expensive article ', async ({ page }) => {
@@ -34,10 +34,10 @@ test('Search the most expensive article ', async ({ page }) => {
   await inventory.validatePriceArticle()
 
   await page.pause()
-
+  
 });
 
-test('Purshace article', async ({ page }) => {
+test('Purchase article', async ({ page }) => {
   await login.gotoURL()
   await login.login(process.env.user, process.env.password)
   await inventory.addArticles()
@@ -48,10 +48,10 @@ test('Purshace article', async ({ page }) => {
   await checkout.validatePurchaseStatus()
 
   await page.pause()
-
+  
 });
 
-test('Purshace with missing requiered fields', async ({ page }) => {
+test('Purchase with missing requiered fields', async ({ page }) => {
   await login.gotoURL()
   await login.login(process.env.user, process.env.password)
   await inventory.addArticles()
@@ -61,7 +61,7 @@ test('Purshace with missing requiered fields', async ({ page }) => {
   await checkout.validateErrorMessage()
 
   await page.pause()
-
+  
 });
 
 });
