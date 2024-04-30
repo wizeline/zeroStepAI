@@ -8,7 +8,7 @@ test.only('Purchase article', async ({ page }) => {
   await ai('go to this page https://www.saucedemo.com/', { page, test })
   await ai('insert username as standard_user', { page, test })
   await ai('insert password as secret_sauce in the password field', { page, test })
-  await ai('click buton login', { page, test })
+  await ai('click button login', { page, test })
   await ai('add to the cart the 2 articles', { page, test })
   await page.pause()
 
@@ -31,7 +31,7 @@ test('Purchace article not complete info', async ({ page }) => {
   await ai('go to this page https://www.saucedemo.com/', { page, test })
   await ai('insert username as standard_user', { page, test })
   await ai('insert password as secret_sauce in the password field', { page, test })
-  await ai('click buton login', { page, test })
+  await ai('click button login', { page, test })
   await ai('add to the cart the 2 articles', { page, test })
   await page.pause()
 
