@@ -16,10 +16,10 @@ export class loginPage extends base {
     await ai('click buton login', { page: this.page, test: this.test })
   }
 
-  async validateErrorMessage(){
-    var message = await ai('get the value from the error message', { page: this.page, test: this.test })
-    console.log(message)
-    expect(message).toContain('not match')
+  async validateLoginsStatus(){
+    var statusLogin = await ai('was sucessful the login?', { page: this.page, test: this.test })
+    console.log(statusLogin)
+    expect(statusLogin).toEqual(false)
   }
 
 

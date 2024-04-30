@@ -8,13 +8,13 @@ export class inventoryPage extends base {
 
 
   async validatePriceArticle(){
-    await ai('order product by low to high', { page: this.page, test: this.test })
-    await ai('click in the most expensive article', { page: this.page, test: this.test })
-    var price = await ai('get value of the price', { page: this.page, test: this.test })
+    await ai('order product by Price high to low', { page: this.page, test: this.test })
+    var price = await ai('get the price of the first article', { page: this.page, test: this.test })
     console.log(price)
   
     expect(price).toEqual('$ 49.99')
   }
+
   async addArticles(){
     await ai('add to the cart the 2 articles', { page: this.page, test: this.test })
 

@@ -17,12 +17,14 @@ export class checkoutPage extends base {
 
   }
 
-  async validateSuccessMessage(){
-    const element = await this.page.locator('.checkout_complete_container')
-    expect(element).toBeVisible()
+  async validatePurchaseStatus(){
+    var statusPurchase = await ai('was succesful the purchase?', { page: this.page, test: this.test })
+    console.log(statusPurchase)
+
+    expect(statusPurchase).toEqual(true)
   }
 
-  async validateErrorMessageForm(){
+  async validateErrorMessage(){
     var value = await ai('get the css locator from the error message', { page: this.page, test: this.test  })
     console.log(value)
     const element = await this.page.locator(value)

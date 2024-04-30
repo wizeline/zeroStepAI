@@ -6,7 +6,7 @@ import { cartPage } from './cartPage.pom.ts';
 import { checkoutPage } from './checkoutPage.pom.ts';
 require('dotenv').config()
 
-test.describe.serial('Zero step IA by GPT3.5 and GPT4', () => {
+test.describe.parallel('Zero step IA by GPT3.5 and GPT4', () => {
   let login
   let inventory
   let cart
@@ -22,7 +22,7 @@ test.describe.serial('Zero step IA by GPT3.5 and GPT4', () => {
 test('Login bad credentials', async ({ page }) => {
   await login.gotoURL()
   await login.login(process.env.badUser, process.env.badPassword)
-  await login.validateErrorMessage()
+  await login.validateLoginsStatus()
 
   await page.pause()
 
@@ -45,7 +45,7 @@ test('Purshace article', async ({ page }) => {
   await cart.checkoutPurchase()
   await checkout.fillForm()
   await checkout.finishePurchase()
-  await checkout.validateSuccessMessage()
+  await checkout.validatePurchaseStatus()
 
   await page.pause()
 
@@ -58,7 +58,7 @@ test('Purshace with missing requiered fields', async ({ page }) => {
   await inventory.goToCart()
   await cart.checkoutPurchase()
   await checkout.finishePurchase()
-  await checkout.validateErrorMessageForm()
+  await checkout.validateErrorMessage()
 
   await page.pause()
 
