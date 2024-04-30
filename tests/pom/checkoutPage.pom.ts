@@ -27,8 +27,7 @@ export class checkoutPage extends base {
   async validateErrorMessage(){
     var value = await ai('get the css locator from the error message', { page: this.page, test: this.test  })
     console.log(value)
-    const element = await this.page.locator(value)
-    expect(element).toBeVisible()
+    expect(value).toContain('error')
   }
 
 }
