@@ -32,7 +32,7 @@ test('Purchace article not complete info', async ({ page }) => {
   await ai('insert username as standard_user', { page, test })
   await ai('insert password as secret_sauce in the password field', { page, test })
   await ai('click button login', { page, test })
-  await ai('add to the cart the 2 articles', { page, test })
+  await ai('add to the cart the first 2 articles', { page, test })
   await page.pause()
 
   await ai('go to te cart', { page, test })
