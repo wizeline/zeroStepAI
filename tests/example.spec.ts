@@ -4,7 +4,7 @@ require('dotenv').config()
 
 const url = 'https://www.saucedemo.com/'
 
-test.only('Purshace article', async ({ page }) => {
+test.only('Purchase article', async ({ page }) => {
   await ai('go to this page https://www.saucedemo.com/', { page, test })
   await ai('insert username as standard_user', { page, test })
   await ai('insert password as secret_sauce in the password field', { page, test })
@@ -27,7 +27,7 @@ test.only('Purshace article', async ({ page }) => {
 
 });
 
-test('Purshace article not complete info', async ({ page }) => {
+test('Purchace article not complete info', async ({ page }) => {
   await ai('go to this page https://www.saucedemo.com/', { page, test })
   await ai('insert username as standard_user', { page, test })
   await ai('insert password as secret_sauce in the password field', { page, test })
