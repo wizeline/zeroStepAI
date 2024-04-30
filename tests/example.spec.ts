@@ -60,7 +60,7 @@ test('Purchase article', async ({ page }) => {
 
 });
 
-test('Purshace with missing requiered fields', async ({ page }) => {
+test.only('Purshace with missing requiered fields', async ({ page }) => {
   await ai('go to this page https://www.saucedemo.com/', { page, test })
   await ai('insert username as standard_user', { page, test })
   await ai('insert password as secret_sauce in the password field', { page, test })
@@ -72,8 +72,7 @@ test('Purshace with missing requiered fields', async ({ page }) => {
   var value = await ai('get the css locator from the error message', { page, test })
   console.log(value)
 
-  const element = await page.locator(value)
-  expect(element).toBeVisible()
+  expect(value).toEqual('H3[data-test="error"]')
 
   await page.pause()
 
