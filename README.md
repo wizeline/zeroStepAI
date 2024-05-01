@@ -1,14 +1,14 @@
 # zeroStepAI
 Automation test using AI powered by gpt
 
-## Configuration .env file
-
--user=""
--password=""
--badUser=""
--badPassword=""
--ZEROSTEP_TOKEN=""
-
+## Create .env file
+```
+user=""
+password=""
+badUser=""
+badPassword=""
+ZEROSTEP_TOKEN=""
+```
 to get the zero step token you have to create an account in the oficial page.
 
 ## How to run
