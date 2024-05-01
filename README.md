@@ -2,6 +2,7 @@
 Automation test using AI powered by gpt
 
 ## Configuration .env file
+
 user=""
 password=""
 badUser=""
