@@ -1,6 +1,10 @@
 # zeroStepAI
 Automation test using AI powered by gpt
 
+# Configuration
+just run the command
+npm i
+
 ## Create .env file
 ```
 user=""
